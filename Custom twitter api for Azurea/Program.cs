@@ -87,7 +87,7 @@ namespace tenmiktwit
                 string baseString = String.Empty;
                 baseString += "POST" + "&";
                 baseString += Uri.EscapeDataString(
-                    "http://api.twitter.com/1/statuses/update.json")
+                    "https://api.twitter.com/1.1/statuses/update.json")
                     + "&";
                 baseString += "in_reply_to_status_id%3D" + inreply + "%26"; //inreply 정보 basestring에추가
                 baseString += "include_entities%3Dtrue%26";
@@ -129,7 +129,7 @@ namespace tenmiktwit
                 //authorization 헤더 만듬
                 HttpWebRequest hwr =
                     (HttpWebRequest)WebRequest.Create(
-                    @"http://api.twitter.com/1/statuses/update.json");
+                    @"https://api.twitter.com/1.1/statuses/update.json");
 
                 string authorizationHeaderParams = String.Empty;
                 authorizationHeaderParams += "OAuth ";
